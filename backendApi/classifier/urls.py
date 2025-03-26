@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import PredictBreastCancerView
+from . import views
 
 urlpatterns = [
-    path('predict/', PredictBreastCancerView.as_view(), name='predict'),
+    path('predict/', views.PredictBreastCancerView.as_view(), name='predict'),
+    path('metrics/', views.ModelMetricsView.as_view(), name='metrics'),
 ]
 
